@@ -4,9 +4,9 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface FinalCustomerRepository extends CrudRepository<FinalCustomer, Long> {
+public interface FinalCustomerRepository extends CrudRepository<Customer, Long> {
 
-    List<FinalCustomer> findByLastName(String lastName);
+    List<Customer> findByLastName(String lastName);
 
-    FinalCustomer findById(long id);
+    Customer findById(long id);
 }

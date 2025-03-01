@@ -20,11 +20,11 @@ public class FinalProjectApplication {
 	public CommandLineRunner demo(FinalCustomerRepository repository) {
 		return (args) -> {
 			// save a few customers
-			repository.save(new FinalCustomer("Jack", "Bauer"));
-			repository.save(new FinalCustomer("Chloe", "O'Brian"));
-			repository.save(new FinalCustomer("Kim", "Bauer"));
-			repository.save(new FinalCustomer("David", "Palmer"));
-			repository.save(new FinalCustomer("Michelle", "Dessler"));
+			repository.save(new Customer("Jack", "Bauer"));
+			repository.save(new Customer("Chloe", "O'Brian"));
+			repository.save(new Customer("Kim", "Bauer"));
+			repository.save(new Customer("David", "Palmer"));
+			repository.save(new Customer("Michelle", "Dessler"));
 
 			// fetch all customers
 			log.info("Customers found with findAll():");
@@ -35,7 +35,7 @@ public class FinalProjectApplication {
 			log.info("");
 
 			// fetch an individual customer by ID
-			FinalCustomer customer = repository.findById(1L);
+			Customer customer = repository.findById(1L);
 			log.info("FinalCustomer found with findById(1L):");
 			log.info("--------------------------------");
 			log.info(customer.toString());
